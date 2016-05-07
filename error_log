@@ -1,0 +1,3 @@
+[07-May-2016 17:59:24 America/New_York] PHP Warning:  require(/home/agriizrv/public_html/newBlog/../bootstrap/autoload.php): failed to open stream: No such file or directory in /home/agriizrv/public_html/newBlog/index.php on line 22
+[07-May-2016 17:59:24 America/New_York] PHP Fatal error:  require(): Failed opening required '/home/agriizrv/public_html/newBlog/../bootstrap/autoload.php' (include_path='.:/opt/alt/php56/usr/share/pear:/opt/alt/php56/usr/share/php') in /home/agriizrv/public_html/newBlog/index.php on line 22
+[07-May-2016 22:38:31 UTC] PHP Parse error:  syntax error, unexpected '@' in /home/agriizrv/public_html/newBlog/app/Http/routes.php on line 23
