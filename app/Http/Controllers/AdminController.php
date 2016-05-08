@@ -25,6 +25,21 @@ class AdminController extends Controller
     
     public function contentPage()
     {
-    	return view('admin.content');
+        return view('admin.content');
+    }
+    
+    public function registrationPage()
+    {
+        return view('admin.register');
+    }
+    
+    public function settingPage()
+    {
+        return view('admin.setting');
+    }
+
+    public function logout()
+    {
+        
     }
 }
