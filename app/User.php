@@ -28,11 +28,11 @@ class User extends Authenticatable
     
     public function menu()
     {
-    	return $this->hasMany('Blog\Menu');
+    	return $this->hasMany('Blog\Menu', 'user_id');
     }
     
     public function content()
     {
-    	return $this->hasMany('Blog\Content');
+    	return $this->hasMany('Blog\Content', 'user_id');
     }
 }

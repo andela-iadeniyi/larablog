@@ -11,7 +11,7 @@ class Menu extends Model
     
     public function content()
     {
-    	return $this->hasMany('Blog\Content');
+    	return $this->hasMany('Blog\Content', 'menu_id');
     }
     
     public function user()
