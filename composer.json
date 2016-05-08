@@ -46,6 +46,6 @@
     },
     "config": {
         "preferred-install": "dist",
-	"cache-dir": "/home/agriizrv/public_html/newBlog/cache"
+        "cache-dir": "/home/agriizrv/public_html/newBlog/cache"
     }
 }
