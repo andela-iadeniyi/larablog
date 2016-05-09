@@ -2,6 +2,7 @@
 
 namespace Blog;
 
+use Auth;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 
 class User extends Authenticatable
@@ -34,5 +35,20 @@ class User extends Authenticatable
     public function content()
     {
     	return $this->hasMany('Blog\Content', 'user_id');
+    }
+
+    public function biography()
+    {
+        return $this->hasOne('Blog\Biography', 'user_id');
+    }
+
+    public function avatar()
+    {
+        return $this->hasOne('Blog\Avatar', 'user_id');
+    }
+
+    public function userDetails()
+    {
+        return User::whereId(Auth::user()->id)->first();
     }
 }

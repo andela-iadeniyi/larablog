@@ -2,7 +2,7 @@
 
 namespace Blog\Http\Controllers;
 
-use Blog\Model;
+use Blog\Menu;
 use Blog\Http\Requests;
 use Illuminate\Http\Request;
 
@@ -26,7 +26,7 @@ class MenuController extends Controller
      *
      * @return bool
      */
-    public function insertMenu (Request $request)
+    public function create (Request $request)
     {
     	$menu = Menu::create([
     	    'name' => $request->name,

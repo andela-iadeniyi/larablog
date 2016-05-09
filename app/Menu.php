@@ -18,4 +18,9 @@ class Menu extends Model
     {
     	return $this->belongsTo('Blog\User');
     }
+
+    public function loadMenu()
+    {
+        return Menu::all();
+    }
 }

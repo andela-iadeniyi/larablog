@@ -2,9 +2,10 @@
 
 namespace Blog\Http\Controllers;
 
-use Illuminate\Http\Request;
-
+use Auth;
+use Blog\Menu;
 use Blog\Http\Requests;
+use Illuminate\Http\Request;
 
 class AdminController extends Controller
 {
@@ -37,9 +38,11 @@ class AdminController extends Controller
     {
         return view('admin.setting');
     }
-
+    
     public function logout()
     {
-        
+        Auth::logout();
+            
+        return redirect('/admin');
     }
 }

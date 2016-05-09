@@ -15,9 +15,10 @@
     <div class="container">
 
         <form class="form-signin" id="login_form" action="/admin/login" method="post">
+            {{ csrf_field() }}
             <h2 class="form-signin-heading">Please sign in</h2>
             <label for="inputEmail" class="sr-only">Email address</label>
-            <input type="text" name="username" id="inputEmail" class="form-control" placeholder="Email address" required autofocus>
+            <input type="email" name="email" id="email" class="form-control" placeholder="Email address" required autofocus>
             <label for="inputPassword" class="sr-only">Password</label>
             <input type="password" id="inputPassword" name="password" class="form-control" placeholder="Password" required>
             <div class="checkbox">
@@ -27,21 +28,5 @@
         </form>
 
     </div> <!-- /container -->
-
-    <script type="text/javascript">
-    $(document).ready(function(){
-        $("#login_form").submit(function(){
-            $.post('/admin/login', $("#login_form").serialize(), function(e){
-                if (e == 1) {
-                    document.location.href = "/admin/home";
-                } else {
-                    alert('Invalid login details provided');
-                }
-            });
-
-            return false;
-        });
-    });
-    </script>
 </body>
 </html>

@@ -22,10 +22,18 @@ Route::get('/admin', function () {
 Route::group(['prefix' => 'admin'], function () {
     Route::get('/home', 'AdminController@homePage');
     Route::get('/menu', 'AdminController@menuPage');
+    Route::get('/logout', 'AdminController@logout');
     Route::get('/subMenu', 'AdminController@subMenuPage');
     Route::get('/content', 'AdminController@contentPage');
+    Route::get('/settings', 'AdminController@settingPage');
     Route::get('/registration', 'AdminController@registrationPage');
-    Route::get('/setting', 'AdminController@settingPage');
-    Route::get('/logout', 'AdminController@logout');
+
+    Route::post('/login', 'UserController@login');
+    Route::post('/user/create', 'UserController@create');
+    Route::post('/user/update', 'UserController@update');
+    Route::post('/user/updateAvatar', 'UserController@updateAvatar');
+    Route::post('/menu/create', 'MenuController@create');
+    Route::post('/content/create', 'ContentController@create');
+    Route::post('/user/passwordReset', 'UserController@updatePassword');
     
 });
